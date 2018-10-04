@@ -1,0 +1,257 @@
+@charset "utf-8";
+$font:12px;
+//顶部导航
+.nav-top {
+    height: 30px;
+    background: #fff;
+    line-height: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    li {
+        position: relative;
+        padding: 0 8px;
+        &:first-child {
+            padding-left: 0;
+        }
+        &:before {
+            //导航短线
+            content: "";
+            width: 1px;
+            height: 10px;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            background: #e4e4e4;
+            z-index: 0;
+        }
+    }
+    a {
+        &:hover {
+            color: #ca151d;
+        }
+        font-size: $font;
+        color: #a4a4a4;
+    }
+    //顶部导航左边 下载APP和更多精彩
+    .s-download {
+        position: relative;
+        margin: 0 -8px;
+        z-index: 2;
+        .box {
+            display: none;
+        }
+        .h {
+            position: relative;
+            padding: 0 10px 0 8px;
+            height: 30px;
+            z-index: 15;
+            a {
+                //小三角形
+                padding-right: 10px;
+                position: relative;
+                &:before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    border-top: 6px solid #999;
+                    position: absolute;
+                    top: 3px;
+                    right: -5px;
+                    z-index: 15;
+                }
+            }
+        }
+    }
+    .b {
+        //隐藏的APP二维码 和 更多精彩
+        position: absolute;
+        z-index: 0;
+        top: 30px;
+        right: -1px;
+        background: #fff;
+        border: 1px solid #ededed;
+        box-shadow: 0 2px 6px 0 rgba(121, 121, 121, 0.26);
+        .down-more {//隐藏框的大小
+            width: 144px;
+            padding: 9px 10px 9px 9px;
+            text-align: center;
+            line-height: 32px;
+            .code {
+                padding-top: 11px;
+                color: #717171;
+            }
+            p {
+                font-size: 12px;//导航字体
+            }
+            a {
+                color: #3a3a3a;//导航字体颜色
+            }
+        }
+    }
+     .nav-left .s-download {
+        &:hover a:before {
+            transform: rotate(180deg); //三角形旋转180
+        }
+        &:hover {
+            box-shadow: 0 2px 6px 0 rgba(121, 121, 121, 0.26); //阴影
+        }
+        &:hover .box {
+            display: block; //隐藏盒子显示
+        }
+        &:hover .box span {
+            //下载APP和更多精彩 hover的小盒子
+            width: 75px;
+            height: 30px;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            background: #fff;
+            z-index: 8;
+            border: 1px solid #ededed;
+            border-bottom: 1px solid #fff;
+        }
+    }
+    //顶部导航右边登录 注册 购物车
+    .nav-right {
+        float: right;
+        margin-right: -18px;
+        div {
+            float: left;
+        }
+        .shopping-car {
+            padding: 0 18px 0 12px;
+            position: relative;
+            z-index: 5;
+            a {
+                position: relative;
+                padding-left: 28px;
+                &:before {
+                    content: "";
+                    width: 14px;
+                    height: 14px;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: url(../imgages/icon-header.png) no-repeat; //购物车图标
+                }
+            }
+        }
+        .s-car {//购物车框
+            padding: 50px 0 50px;
+            width: 460px;
+            text-align: center;
+            color: #a4a4a4;
+            font-size: 14px;
+            i {
+                //大的购物车图标
+                width: 100px;
+                height: 100px;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 16px;
+                background: url(../imgages/icon-header-minicart.png) no-repeat;
+            }
+        }
+    }
+}
+//头部nav与搜索框
+.header{
+    min-width: 1200px;
+    height: 50px;
+    padding: 10px 0;
+    background: #fff;
+    position: relative;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    line-height: 1.5;
+    .header-left{
+        float: left;
+        .header-logo{//头部logo
+            float: left;
+            margin-right: 40px;
+            width: 240px;
+            height: 50px;
+            a{
+                float: left;
+            }
+        }
+    }
+    .header-nav{//头部导航
+        float: left;
+        min-width: 560px;
+        height: 40px;
+        overflow: hidden;
+        margin-top: 5px;
+        li{
+            float: left;
+            margin-right: 20px;
+            a{//导航字体
+                display: block;
+                font-size: 16px;
+                color: #3a3a3a;
+                line-height: 40px;
+                position: relative;
+                &:hover{
+                    color: #ca141d;
+                    //border-bottom: 3px solid #ca141d;
+                }
+            }
+        }
+    }
+    .header-right{//搜索框
+        float: right;
+        .search{
+            margin-top: 10px;
+            position: relative;
+        }
+        .search-form{//搜索框的外框
+            line-height: 1;
+            width: 328px;
+            height: 30px;
+            border-radius: 2px;
+            border: 1px solid #ddd;
+            overflow: hidden;
+            position: relative;
+            .text{//搜索框的外框本身的样式
+                background: #fff;
+                border: 0;
+                width: 299px;
+                height: 32px;
+                line-height: 32px;
+                padding-left: 10px;
+                outline: 0;
+            }
+            .button{//搜索图标
+                background:url(../imgages/icon-header.png) 0 -21px no-repeat;
+                width: 20px;
+                height: 33px;
+                border: 0;
+                cursor: pointer;
+                text-indent: -9999px;
+                overflow: hidden;
+                position: absolute;
+                right: 12px;
+            }
+        }
+    }
+    .search-key{//搜索框的字
+        position: absolute;
+        max-width: 280px;
+        left: 10px;
+        bottom: 3px;
+        overflow: hidden;
+        white-space: nowrap;
+        z-index: 2;
+        a{//搜索框的字体样式
+            color: #a4a4a4;
+            font-size: 12px;
+            margin-right: 10px;
+            padding: 4px 4px 1px;
+            background: #f5f5f5;
+            &:hover{
+                color: #CA141D;
+            }
+        }
+    }
+}

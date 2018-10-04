@@ -1,0 +1,189 @@
+@charset "utf-8";
+//荣誉  保障
+.slogan-container,
+.service-container,
+.footer-container {
+    width: 100%;
+    border-top: 1px solid #eee;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    line-height: 1.5;
+    background: #f0f0f0;
+}
+
+//slogan 标语
+.slogan {
+    padding: 46px 0;
+    overflow: hidden;
+    li {
+        float: left;
+        line-height: 47px;
+        font-size: 18px;
+        height: 47px;
+        width: 300px;
+        text-align: left;
+        a {
+            color: #3A3A3A;
+        }
+        i {
+            //荣誉  保障  图标
+            width: 47px;
+            height: 47px;
+            margin-right: 16px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
+    .s1 i {
+        background: url(../imgages/icon-common.png) 0 -151px no-repeat;
+    }
+    .s2 i {
+        background: url(../imgages/icon-common.png) -94px -151px no-repeat;
+    }
+    .s3 i {
+        background: url(../imgages/icon-common.png) -141px -151px no-repeat;
+    }
+    .s4 i {
+        background: url(../imgages/icon-common.png) -47px -151px no-repeat;
+    }
+}
+
+//service 服务
+.service {
+    border-top: #e8e8e8;
+    padding: 26px 0 18px;
+    overflow: hidden;
+    .service-l {
+        //左边
+        float: left;
+        width: 940px;
+        min-height: 164px;
+        margin-top: 2px;
+        border-right: 1px solid #ebebeb;
+        dl {
+            width: 16.6667%;
+            float: left;
+        }
+    }
+    dt {
+        font-size: 14px;
+        .line {
+            //标题上的短线
+            background: #a8a8a8;
+            width: 22px;
+            height: 2px;
+            margin: 2px 0 12px 0;
+        }
+        .title {
+            //标题
+            font-size: 14px;
+            padding-bottom: 12px;
+            color: #3a3a3a;
+            line-height: 1.5;
+        }
+    }
+    dd {
+        //标题下的列
+        li {
+            line-height: 24px;
+            height: 24px;
+            float: none;
+            a {
+                color: #666;
+                font-size: 12px;
+            }
+        }
+    }
+    .service-r {
+        //右边
+        width: 210px;
+        height: 164px;
+        margin-top: 2px;
+        padding-left: 40px;
+        float: left;
+        .service-btn {
+            //在线客服
+            width: 161px;
+            height: 35px;
+            padding: 0;
+            margin-top: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            color: #900;
+            font-size: 14px;
+            line-height: 35px;
+            text-align: center;
+            cursor: pointer;
+            display: block;
+            border-radius: 5px;
+            i {
+                //在线客服图标
+                background: url(../imgages/icon-common.png) -101px -23px;
+                display: inline-block;
+                height: 18px;
+                width: 22px;
+                margin-right: 8px;
+                vertical-align: middle;
+            }
+        }
+        .s7 {
+            .title {
+                //电话号码
+                font-size: 24px;
+                padding: 0;
+            }
+            span {
+                //24小时客服热线
+                font-size: 12px;
+                color: #666;
+            }
+        }
+    }
+}
+//底部声明
+.footer-container {
+    background: #e6e6e6;
+    .footer {
+        padding: 26px 0 34px;
+        .footer-area {//底部核心区域
+           height: 40px;
+            text-align: left;
+            line-height: 20px;
+            color: #a4a4a4;
+        }
+    }
+    p{
+        float: left;
+        font-size: 12px;
+    }
+    a{//a标签文字
+        color: #A4A4A4;
+        font-size: 12px;
+    }
+    .footer-logo {//底部logo
+        padding: 20px 38px 0 0;
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            img{
+                vertical-align: top;
+            }
+        }
+    }
+    .footer-r{//底部右侧图片
+        height: 40px;
+        float: right;
+        padding-top: 15px;
+        a{//图片属性
+            display: block;
+            margin-left: 4px;
+            float: left;
+            width: 70px;
+            height: 24px;
+            img{
+                width: 70px;
+            height: 24px;
+            }
+        }
+    }
+}
